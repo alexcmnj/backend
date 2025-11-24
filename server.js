@@ -9,7 +9,8 @@ const session = require("express-session");
 
 const app = express();
 app.use(cors({
-    origin: "http://127.0.0.1:5500", // tu frontend
+    origin: ["http://127.0.0.1:5500",
+    "https://candid-cupcake-80473b.netlify.app"], // tu frontend
     credentials: true
 }));
 
@@ -207,4 +208,4 @@ app.get("/api/ordenes", (req, res) => {
 
 // -------------------- START SERVER --------------------
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Servidor corriendo en puerto`+ PORT));
