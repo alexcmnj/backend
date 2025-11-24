@@ -10,7 +10,8 @@ const session = require("express-session");
 const app = express();
 app.use(cors({
     origin: ["http://127.0.0.1:5500",
-    "https://candid-cupcake-80473b.netlify.app"], // tu frontend
+    "https://candid-cupcake-80473b.netlify.app",
+    "https://backend-xx8k.onrender.com"], // tu frontend
     credentials: true
 }));
 
